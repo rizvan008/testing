@@ -10,6 +10,9 @@
        </style>
    </head>
    <body>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+      
          <canvas id="app">
       <h1>testing worked.........</h1>
     </canvas>
@@ -22,6 +25,8 @@
         <!-- Marker-based AR -->
         <a-marker preset="hiro">
             <!-- Add a 3D object here -->
+           <a-entity gltf-model="/testmodel.glb" scale="0.1 0.1 0.1"></a-entity>
+
             <a-box position="0 0.5 0" material="color: red;"></a-box>
         </a-marker>
  
