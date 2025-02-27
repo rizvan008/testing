@@ -8,12 +8,10 @@
            body { margin: 0; overflow: hidden; }
            canvas { display: block; }
        </style>
+      <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+       <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
    </head>
    <body>
-      <!-- debugging console -->
-      <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
-     <script>eruda.init();</script>
-
       <!-- for obect recognition in the ar scene -->
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
@@ -23,8 +21,6 @@
     </canvas>
     <script type="module" src="/main.js"></script>
      
-       <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-       <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
        <script src="script.js"></script>
        <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
         <!-- Marker-based AR -->
@@ -40,5 +36,8 @@
         <!-- Camera -->
         <a-entity camera></a-entity>
     </a-scene>
+            <!-- debugging console -->
+      <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+     <script>eruda.init();</script>
    </body>
    </html>
