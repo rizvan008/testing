@@ -10,6 +10,11 @@
        </style>
    </head>
    <body>
+      <!-- debugging console -->
+      <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+     <script>eruda.init();</script>
+
+      <!-- for obect recognition in the ar scene -->
       <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
       
@@ -25,8 +30,10 @@
         <!-- Marker-based AR -->
         <a-marker preset="hiro">
             <!-- Add a 3D object here -->
-           <a-entity gltf-model="/testmodel.glb" scale="0.1 0.1 0.1"></a-entity>
-
+           <a-entity gltf-model="url(testmodel.glb)" scale="0.5 0.5 0.5"
+             gltf-model-loaded="console.log('Model loaded!')"
+             gltf-model-error="console.error('Error loading model!')">
+   </a-entity>
             <a-box position="0 0.5 0" material="color: red;"></a-box>
         </a-marker>
  
