@@ -25,13 +25,14 @@
        <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: true;">
         <!-- Marker-based AR -->
         <a-marker preset="hiro">
-            <!-- Add a 3D object here -->
-           <a-entity gltf-model="url(https://rizvan008.github.io/testing/testmodel.glb)" scale="1 1 1"
+        <a-box position="0 0.25 0" material="color: red;"></a-box>
+        </a-marker>
+          
+        <!-- Add a 3D object here -->
+      <a-entity gltf-model="url(https://rizvan008.github.io/testing/testmodel.glb)" scale="1 1 1"
              gltf-model-loaded="console.log('Model loaded!')"
              gltf-model-error="console.error('Error loading model!')">
-   </a-entity>
-            <a-box position="0 0.25 0" material="color: red;"></a-box>
-        </a-marker>
+      </a-entity>
  
         <!-- Camera -->
         <a-entity camera></a-entity>
